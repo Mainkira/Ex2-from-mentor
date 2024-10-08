@@ -11,8 +11,9 @@ class FirstTask(BasePage):
     def open_page(self):
         self.open(self.endpoint)
 
-    def click_button(self):
-        super().click_button(*self.button_locator)
+    def click_button_on_page(self):
+        self.click_button(*self.button_locator)
 
     def get_result_text(self):
-        return super().get_text(*self.result_locator)
+        return self.get_text(*self.result_locator)
+
